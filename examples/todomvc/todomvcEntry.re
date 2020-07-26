@@ -1,4 +1,3 @@
-[@bs.config {jsx: 3}];
 /**
   * Example of a todo list, loosely based on the redux example, mixed with
   * some code from Jared Forsyth's ReasonReact tutorial, and Cheng Lou's
@@ -122,7 +121,7 @@ module TodoItem = {
     React.useEffect1(
       () => {
         Js.log("Inside effect ");
-        let optionRef = editFieldRef->React.Ref.current->Js.Nullable.toOption;
+        let optionRef = editFieldRef.current->Js.Nullable.toOption;
         switch (state.editing, optionRef) {
         | (true, Some(field)) =>
           let node = ReactDOMRe.domElementToObj(field);

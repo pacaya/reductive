@@ -1,4 +1,3 @@
-[@bs.config {jsx: 3}];
 open Jest;
 open Expect;
 open ReasonHooksTestingLibrary;
@@ -54,8 +53,8 @@ let getResult = container =>
   container->Testing.Result.result->Testing.Result.current;
 
 describe("reductiveContext", () => {
-  open Testing;
   open ReactTestingLibrary;
+  open Testing;
 
   let options = Options.t(~wrapper=App.make, ());
   beforeEach(() =>
